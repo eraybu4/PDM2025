@@ -9,6 +9,8 @@ function preload() {
 function setup() {
   createCanvas(400, 400);
 
+  userStartAudio();
+  
   filt1 = new Tone.Filter({
     frequency: 3000,  
     type: "lowpass",
@@ -27,7 +29,7 @@ function setup() {
   
   noise1.connect(noiseEnv);
   noiseEnv.connect(filt1);
-  
+  noise1.start();
   
   
 }
@@ -51,13 +53,13 @@ function draw() {
 }
 
 function mouseClicked() {
-  noise1.start();
-    noise1.triggerAttack();
+  
+    Tone.start();
     noiseEnv.triggerAttackRelease(0.5);
 
 
     fireworks.push({ x: mouseX, y: mouseY, timer: 60 });
-    noise1.start();
+   
     console.log('Explosion sound triggered');
   
 }
