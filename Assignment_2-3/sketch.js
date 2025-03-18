@@ -52,12 +52,12 @@ function draw() {
 
 function mouseClicked() {
   
-    
+    noise1.triggerAttack();
     noiseEnv.triggerAttackRelease(0.5);
 
 
     fireworks.push({ x: mouseX, y: mouseY, timer: 60 });
-    Tone.start();
+    noise1.start();
     console.log('Explosion sound triggered');
   
 }
