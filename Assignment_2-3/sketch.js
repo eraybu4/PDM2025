@@ -51,7 +51,7 @@ function draw() {
 }
 
 function mouseClicked() {
-  
+  noise1.start();
     noise1.triggerAttack();
     noiseEnv.triggerAttackRelease(0.5);
 
