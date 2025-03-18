@@ -57,7 +57,7 @@ function mouseClicked() {
 
 
     fireworks.push({ x: mouseX, y: mouseY, timer: 60 });
-    
+    noise1.start();
     console.log('Explosion sound triggered');
   
 }
