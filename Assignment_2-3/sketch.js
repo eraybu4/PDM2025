@@ -29,7 +29,7 @@ function setup() {
   noiseEnv.connect(filt1);
   
   
-  noise1.start();
+  
 }
 
 function draw() {
