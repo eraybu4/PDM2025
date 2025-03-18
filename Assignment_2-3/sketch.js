@@ -9,8 +9,6 @@ function preload() {
 function setup() {
   createCanvas(400, 400);
 
-  
-  
   filt1 = new Tone.Filter({
     frequency: 3000,  
     type: "lowpass",
@@ -29,9 +27,7 @@ function setup() {
   
   noise1.connect(noiseEnv);
   noiseEnv.connect(filt1);
-  
-  
-  
+
 }
 
 function draw() {
