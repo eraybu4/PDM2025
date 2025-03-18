@@ -29,7 +29,7 @@ function setup() {
   
   noise1.connect(noiseEnv);
   noiseEnv.connect(filt1);
-  noise1.start();
+  
   
   
 }
@@ -55,6 +55,7 @@ function draw() {
 function mouseClicked() {
   
     Tone.start();
+  noise1.start();
     noiseEnv.triggerAttackRelease(0.5);
     fireworks.push({ x: mouseX, y: mouseY, timer: 60 });
     console.log('Explosion sound triggered');
